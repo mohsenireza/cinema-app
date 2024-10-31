@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom';
-
 import { db } from '../../data/db';
+import RoomItem from '../../components/RoomItem/RoomItem';
 
 function Home() {
   return (
     <ul>
       {db.rooms.map((room) => (
-        <li key={room.id}>
-          <Link to={`/room/${room.id}`}>
-            <h3>{room.title}</h3>
-          </Link>
-        </li>
+        <RoomItem
+          key={room.id}
+          id={room.id}
+          title={room.title}
+        />
       ))}
     </ul>
   )
