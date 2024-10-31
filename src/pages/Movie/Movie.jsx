@@ -1,5 +1,11 @@
+import SeatBooker from "../../components/SeatBooker/SeatBooker";
+
 function Movie() {
-  return <div>Book a seat</div>;
+  return (
+    <section>
+      <SeatBooker />
+    </section>
+  );
 }
 
 export default Movie;

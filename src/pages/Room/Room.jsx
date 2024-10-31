@@ -13,15 +13,17 @@ function Room() {
   }
 
   return (
-    <ul>
-      {room.movies.map((movie) => (
-        <MovieItem
-          key={movie.id}
-          movie={movie}
-          roomId={roomId}
-        />
-      ))}
-    </ul>
+    <section>
+      <ul>
+        {room.movies.map((movie) => (
+          <MovieItem
+            key={movie.id}
+            movie={movie}
+            roomId={roomId}
+          />
+        ))}
+      </ul>
+    </section>
   );
 }
 

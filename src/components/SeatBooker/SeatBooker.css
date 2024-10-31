@@ -1,0 +1,46 @@
+.seat-booker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seat-booker__seats {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.seat-booker__seat {
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  height: 50px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.seat-booker__seat--booked {
+  background-color: var(--grey);
+}
+
+.seat-booker__seat--active {
+  border-color: var(--blue-primary);
+}
+
+.seat-booker__submit-button {
+  height: 50px;
+  padding-inline: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  color: var(--white);
+  background-color: var(--blue-primary);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.seat-booker__submit-button:hover {
+  background-color: var(--blue-secondary);
+}
