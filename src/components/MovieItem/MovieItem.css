@@ -7,6 +7,10 @@
   overflow: hidden;
 }
 
+.movie-item--not-clickable {
+  pointer-events: none;
+}
+
 .movie-item:hover {
   background-color: var(--grey);
   box-shadow: none

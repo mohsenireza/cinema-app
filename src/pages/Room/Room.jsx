@@ -13,7 +13,7 @@ function Room() {
   }
 
   return (
-    <section>
+    <div>
       <ul>
         {room.movies.map((movie) => (
           <MovieItem
@@ -23,7 +23,7 @@ function Room() {
           />
         ))}
       </ul>
-    </section>
+    </div>
   );
 }
 

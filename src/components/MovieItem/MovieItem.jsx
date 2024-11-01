@@ -3,9 +3,12 @@ import PropTypes from "prop-types";
 
 import "./MovieItem.css";
 
-function MovieItem({ movie, roomId }) {
+function MovieItem({ movie, roomId, isClickable, isListItem }) {
+
+  const ContainerTag = isListItem ? 'li' : 'div';
+
   return (
-    <li className="movie-item">
+    <ContainerTag className={`movie-item ${!isClickable ? 'movie-item--not-clickable' : ''}`}>
       <Link to={`/room/${roomId}/movie/${movie.id}`} className="movie-item__link">
         <figure className="movie-item__image-container">
           <img className="movie-item__image" src={movie.image} loading="lazy" />
@@ -13,7 +16,7 @@ function MovieItem({ movie, roomId }) {
         <h3 className="movie-item__title">{movie.title}</h3>
         <span className="movie-item__time">{movie.startsAt}</span>
       </Link>
-    </li>
+    </ContainerTag>
   );
 }
 
@@ -23,8 +26,15 @@ MovieItem.propTypes = {
     image: PropTypes.string,
     title: PropTypes.string,
     startsAt: PropTypes.string
-  }),
-  roomId: PropTypes.string,
+  }).isRequired,
+  roomId: PropTypes.string.isRequired,
+  isClickable: PropTypes.bool,
+  isListItem: PropTypes.bool,
+};
+
+MovieItem.defaultProps = {
+  isClickable: true,
+  isListItem: true,
 };
 
 export default MovieItem;

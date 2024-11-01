@@ -3,7 +3,7 @@ import RoomItem from '../../components/RoomItem/RoomItem';
 
 function Home() {
   return (
-    <section>
+    <div>
       <ul>
         {db.rooms.map((room) => (
           <RoomItem
@@ -13,7 +13,7 @@ function Home() {
           />
         ))}
       </ul>
-    </section>
+    </div>
   )
 }
 
