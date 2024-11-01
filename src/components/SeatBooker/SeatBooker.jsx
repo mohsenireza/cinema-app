@@ -15,6 +15,8 @@ function SeatBooker() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const hasActiveSeat = activeSeat.row !== null && activeSeat.column !== null;
+
   const ROWS_NUMBER = 10;
   const COLUMNS_NUMBER = 8;
   const LOCAL_STORAGE_BOOKED_SEATS_ID = 'bookedSeats';
@@ -91,6 +93,11 @@ function SeatBooker() {
   };
 
   const submit = () => {
+    if (!hasActiveSeat) {
+      toast.warn('Please select a seat first');
+      return;
+    }
+
     const isSeatBooked = getIsSeatBooked(activeSeat.row, activeSeat.column);
 
     if (isSeatBooked) {
@@ -104,21 +111,17 @@ function SeatBooker() {
   };
 
   const renderSubmitButton = () => {
-    if (activeSeat.row !== null && activeSeat.column !== null) {
-      const isSeatBooked = getIsSeatBooked(activeSeat.row, activeSeat.column);
-      const text = isSeatBooked ? 'Cancel Reservation' : 'Book The Seat';
+    const isSeatBooked = getIsSeatBooked(activeSeat.row, activeSeat.column);
+    const text = isSeatBooked ? 'Cancel Reservation' : 'Book The Seat';
 
-      return (
-        <button
-          className="seat-booker__submit-button"
-          onClick={submit}
-        >
-          {text}
-        </button>
-      );
-    }
-
-    return null;
+    return (
+      <button
+        className={`seat-booker__submit-button ${hasActiveSeat ? '' : 'seat-booker__submit-button--disabled'}`}
+        onClick={submit}
+      >
+        {text}
+      </button>
+    );
   };
 
   return (

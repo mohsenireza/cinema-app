@@ -45,6 +45,11 @@
   background-color: var(--blue-secondary);
 }
 
+.seat-booker__submit-button--disabled,
+.seat-booker__submit-button--disabled:hover {
+  background-color: var(--grey);
+}
+
 @media only screen and (max-width: 768px) {
   .seat-booker__seats {
     gap: 4px;
