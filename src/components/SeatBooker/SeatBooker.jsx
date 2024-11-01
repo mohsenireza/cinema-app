@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import './SeatBooker.css';
 
@@ -70,6 +71,7 @@ function SeatBooker() {
     const storageBookedSeats = getBookedSeatsFromLocalStorage();
     storageBookedSeats.push(seat);
     setBookedSeatsToLocalStorage(storageBookedSeats);
+    toast.success('The seat is booked now');
   };
 
   // Un-book a seat and update local storage
@@ -85,6 +87,7 @@ function SeatBooker() {
       ));
 
     setBookedSeatsToLocalStorage(updatedStorageBookedSeats);
+    toast.success('The reservation was cancelled');
   };
 
   const submit = () => {
