@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 
 import { db } from '../../data/db';
-import SeatBooker from "../../components/SeatBooker/SeatBooker";
-import MovieItem from "../../components/MovieItem/MovieItem";
+import SeatBooker from '../../components/SeatBooker/SeatBooker';
+import MovieItem from '../../components/MovieItem/MovieItem';
 import Header from '../../components/Header/Header';
 
 function MoviePage() {
