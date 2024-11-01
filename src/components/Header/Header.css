@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--text-color-primary);
+}
+
+.header__back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: 0.3s;
+}
+
+.header__back-button:hover {
+  transform: translateX(-10px);
+}
+
+.header__back-icon {
+  height: 24px;
+  width: 24px;
+}

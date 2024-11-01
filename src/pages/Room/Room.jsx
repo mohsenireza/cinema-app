@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 
 import { db } from '../../data/db';
 import MovieItem from '../../components/MovieItem/MovieItem';
+import Header from '../../components/Header/Header';
 
 function Room() {
   const { roomId } = useParams();
@@ -14,6 +15,7 @@ function Room() {
 
   return (
     <div>
+      <Header title={room.title} />
       <ul>
         {room.movies.map((movie) => (
           <MovieItem

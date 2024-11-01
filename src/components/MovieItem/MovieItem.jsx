@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import "./MovieItem.css";
 
-function MovieItem({ movie, roomId, isClickable, isListItem }) {
+function MovieItem({ movie, roomId, isClickable = true, isListItem = true }) {
 
   const ContainerTag = isListItem ? 'li' : 'div';
 
@@ -30,11 +30,6 @@ MovieItem.propTypes = {
   roomId: PropTypes.string.isRequired,
   isClickable: PropTypes.bool,
   isListItem: PropTypes.bool,
-};
-
-MovieItem.defaultProps = {
-  isClickable: true,
-  isListItem: true,
 };
 
 export default MovieItem;
