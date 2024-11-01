@@ -6,7 +6,7 @@
 
 .seat-booker__seats {
   display: grid;
-  gap: 16px;
+  gap: 8px;
   grid-template-columns: auto auto auto auto auto auto auto auto;
   width: 100%;
   margin-bottom: 32px;
@@ -43,4 +43,20 @@
 
 .seat-booker__submit-button:hover {
   background-color: var(--blue-secondary);
+}
+
+@media only screen and (max-width: 768px) {
+  .seat-booker__seats {
+    gap: 4px;
+  }
+
+  .seat-booker__submit-button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .seat-booker__seat {
+    height: 30px;
+  }
 }

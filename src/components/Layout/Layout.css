@@ -1,0 +1,6 @@
+.layout__container {
+  max-width: 1024px;
+  padding-inline: 16px;
+  margin-inline: auto;
+  margin-top: 50px;
+}
