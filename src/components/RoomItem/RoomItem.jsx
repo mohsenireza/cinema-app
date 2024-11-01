@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-import "./RoomItem.css";
+import './RoomItem.css';
 
 function RoomItem({ id, title }) {
   return (

@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import "./MovieItem.css";
+import './MovieItem.css';
 
 function MovieItem({ movie, roomId, isClickable = true, isListItem = true }) {
 

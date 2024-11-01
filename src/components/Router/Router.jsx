@@ -3,12 +3,12 @@ import {
   RouterProvider,
   Route,
   createRoutesFromElements
-} from "react-router-dom";
+} from 'react-router-dom';
 
 import HomePage from '../../pages/HomePage/HomePage';
 import RoomPage from '../../pages/RoomPage/RoomPage';
 import MoviePage from '../../pages/MoviePage/MoviePage';
-import Layout from "../Layout/Layout";
+import Layout from '../Layout/Layout';
 
 function Router() {
   const router = createBrowserRouter(
