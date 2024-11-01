@@ -1,8 +1,8 @@
 import { db } from '../../data/db';
 import RoomItem from '../../components/RoomItem/RoomItem';
-import './Home.css';
+import './HomePage.css';
 
-function Home() {
+function HomePage() {
   return (
     <div className="home-page">
       <h1 className="home-page__title">Choose a room</h1>
@@ -19,4 +19,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default HomePage;

@@ -5,18 +5,18 @@ import {
   createRoutesFromElements
 } from "react-router-dom";
 
-import Home from '../../pages/Home/Home';
-import Room from '../../pages/Room/Room';
-import Movie from '../../pages/Movie/Movie';
+import HomePage from '../../pages/HomePage/HomePage';
+import RoomPage from '../../pages/RoomPage/RoomPage';
+import MoviePage from '../../pages/MoviePage/MoviePage';
 import Layout from "../Layout/Layout";
 
 function Router() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="room/:roomId" element={<Room />} />
-        <Route path="room/:roomId/movie/:movieId" element={<Movie />} />
+        <Route index element={<HomePage />} />
+        <Route path="room/:roomId" element={<RoomPage />} />
+        <Route path="room/:roomId/movie/:movieId" element={<MoviePage />} />
       </Route>
     )
   );

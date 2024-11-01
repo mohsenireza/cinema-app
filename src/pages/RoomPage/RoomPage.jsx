@@ -4,7 +4,7 @@ import { db } from '../../data/db';
 import MovieItem from '../../components/MovieItem/MovieItem';
 import Header from '../../components/Header/Header';
 
-function Room() {
+function RoomPage() {
   const { roomId } = useParams();
 
   const room = db.rooms.find(room => room.id === roomId);
@@ -29,4 +29,4 @@ function Room() {
   );
 }
 
-export default Room;
+export default RoomPage;

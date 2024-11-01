@@ -5,7 +5,7 @@ import SeatBooker from "../../components/SeatBooker/SeatBooker";
 import MovieItem from "../../components/MovieItem/MovieItem";
 import Header from '../../components/Header/Header';
 
-function Movie() {
+function MoviePage() {
   const { roomId, movieId } = useParams();
 
   const room = db.rooms.find(room => room.id === roomId);
@@ -34,4 +34,4 @@ function Movie() {
   );
 }
 
-export default Movie;
+export default MoviePage;
