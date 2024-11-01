@@ -17,6 +17,7 @@ function Router() {
         <Route index element={<HomePage />} />
         <Route path="room/:roomId" element={<RoomPage />} />
         <Route path="room/:roomId/movie/:movieId" element={<MoviePage />} />
+        <Route path="*" element={() => null} />
       </Route>
     )
   );
