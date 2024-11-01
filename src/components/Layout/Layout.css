@@ -2,5 +2,11 @@
   max-width: 1024px;
   padding-inline: 16px;
   margin-inline: auto;
-  padding-bottom: 100px;
+  padding-bottom: 64px;
+}
+
+@media only screen and (max-width: 768px) {
+  .layout__container {
+    padding-bottom: 32px;
+  }
 }
