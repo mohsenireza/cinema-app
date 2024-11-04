@@ -116,6 +116,7 @@ function SeatBooker() {
 
     return (
       <button
+        data-testid="submit-button"
         className={`seat-booker__submit-button ${hasActiveSeat ? '' : 'seat-booker__submit-button--disabled'}`}
         onClick={submit}
       >
@@ -131,6 +132,7 @@ function SeatBooker() {
           [...Array(COLUMNS_NUMBER)].map((_, column) => (
             <div
               key={`${row}_${column}`}
+              data-testid="seat"
               className={`
                 seat-booker__seat
                 ${getIsSeatBooked(row, column) ? 'seat-booker__seat--booked' : ''}
