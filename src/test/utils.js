@@ -1,11 +1,15 @@
 import { render } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 const AllTheProviders = ({ children }) => {
   return (
-    <BrowserRouter>
-      {children}
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        {children}
+      </BrowserRouter>
+      <ToastContainer />
+    </>
   )
 }
 
