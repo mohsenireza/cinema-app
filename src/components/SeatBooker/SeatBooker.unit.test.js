@@ -1,12 +1,12 @@
 import userEvent from '@testing-library/user-event';
+import { useParams } from 'react-router-dom';
 
 import { render, screen } from '../../test/utils';
 import SeatBooker from './SeatBooker';
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useParams: () => ({ roomId: '1', movieId: '1' }),
-}));
+beforeAll(() => {
+  useParams.mockReturnValue({ roomId: '1', movieId: '1' });
+});
 
 afterEach(() => {
   // Clear localStorage

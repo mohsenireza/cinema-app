@@ -1,19 +1,14 @@
 import userEvent from '@testing-library/user-event';
+import { useNavigate } from 'react-router-dom';
 
 import { render, screen } from '../../test/utils';
 import Header from './Header';
 
-const mockedUseNavigate = jest.fn();
-
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useNavigate: () => mockedUseNavigate,
-}));
-
 const title = 'test-title';
 
 afterEach(async () => {
-  mockedUseNavigate.mockClear();
+  const navigate = useNavigate();
+  navigate.mockClear();
 });
 
 test('should render header', () => {
@@ -27,5 +22,6 @@ test('should go back when user clicks on the back button', async () => {
 
   await userEvent.click(screen.getByRole('button'));
 
-  expect(mockedUseNavigate).toBeCalledTimes(1);
+  const navigate = useNavigate();
+  expect(navigate).toBeCalledTimes(1);
 });
