@@ -8,10 +8,10 @@ function MovieItem({ movie, roomId, isClickable = true, isListItem = true }) {
   const ContainerTag = isListItem ? 'li' : 'div';
 
   return (
-    <ContainerTag className={`movie-item ${!isClickable ? 'movie-item--not-clickable' : ''}`}>
+    <ContainerTag data-testid="movie-item" className={`movie-item ${!isClickable ? 'movie-item--not-clickable' : ''}`}>
       <Link to={`/room/${roomId}/movie/${movie.id}`} className="movie-item__link">
         <figure className="movie-item__image-container">
-          <img className="movie-item__image" src={movie.image} loading="lazy" />
+          <img className="movie-item__image" src={movie.image} loading="lazy" alt={movie.title} />
         </figure>
         <h3 className="movie-item__title">{movie.title}</h3>
         <span className="movie-item__time">{movie.startsAt}</span>

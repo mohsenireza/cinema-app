@@ -3,7 +3,7 @@ import './Layout.css';
 
 function Layout() {
   return (
-    <section className="layout">
+    <section data-testid="layout" className="layout">
       <div className="layout__container">
         <Outlet />
       </div>

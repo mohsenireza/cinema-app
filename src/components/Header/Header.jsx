@@ -12,7 +12,7 @@ function Header({ title }) {
   };
 
   return (
-    <div className="header">
+    <div className="header" data-testid="header">
       <button onClick={handleGoBack} className="header__back-button">
         <img className="header__back-icon" src={backIcon} />
       </button>
