@@ -8,7 +8,8 @@ import { db } from '../../data/db';
 
 const room = db.rooms[0];
 
-beforeAll(() => {
+beforeEach(() => {
+  // Mock useParams return value
   useParams.mockReturnValue({ roomId: room.id });
 });
 
@@ -16,6 +17,14 @@ test('should render header', () => {
   render(<RoomPage />);
 
   expect(screen.getByText(room.title)).toBeInTheDocument();
+});
+
+test('should not render header when roomId is invalid', () => {
+  useParams.mockReturnValue({ roomId: 'invalid-id' });
+
+  render(<RoomPage />);
+
+  expect(screen.queryByTestId('header')).not.toBeInTheDocument();
 });
 
 test('should render movies', () => {

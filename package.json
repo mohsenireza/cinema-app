@@ -8,9 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:unit": "jest unit.test.js",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "test:unit": "jest unit.test.js --coverage",
+    "test:e2e": "cypress run",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "react": "^18.3.1",
