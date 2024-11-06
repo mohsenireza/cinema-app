@@ -4,7 +4,6 @@
   border-radius: 4px;
   margin-bottom: 16px;
   transition: 0.3s;
-  overflow: hidden;
 }
 
 .room-item:hover {

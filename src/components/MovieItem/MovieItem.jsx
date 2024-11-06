@@ -9,7 +9,7 @@ function MovieItem({ movie, roomId, isClickable = true, isListItem = true }) {
 
   return (
     <ContainerTag data-testid="movie-item" className={`movie-item ${!isClickable ? 'movie-item--not-clickable' : ''}`}>
-      <Link to={`/room/${roomId}/movie/${movie.id}`} className="movie-item__link">
+      <Link to={`/room/${roomId}/movie/${movie.id}`} className="movie-item__link" tabindex={isClickable ? '0' : '-1'}>
         <figure className="movie-item__image-container">
           <img className="movie-item__image" src={movie.image} loading="lazy" alt={movie.title} />
         </figure>
