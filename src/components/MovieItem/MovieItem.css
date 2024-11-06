@@ -4,20 +4,10 @@
   border-radius: 4px;
   margin-bottom: 16px;
   transition: 0.3s;
-  overflow: hidden;
 }
 
 .movie-item--not-clickable {
   pointer-events: none;
-}
-
-.movie-item:hover {
-  background-color: var(--grey);
-  box-shadow: none
-}
-
-.movie-item:hover .movie-item__image {
-  transform: scale(1.2);
 }
 
 .movie-item__link {
@@ -51,6 +41,19 @@
   color: var(--text-color-secondary)
 }
 
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .movie-item:hover {
+    background-color: var(--grey);
+    box-shadow: none
+  }
+
+  .movie-item:hover .movie-item__image {
+    transform: scale(1.2);
+  }
+}
+
+/* Mobile */
 @media only screen and (max-width: 768px) {
   .movie-item {
     height: auto;

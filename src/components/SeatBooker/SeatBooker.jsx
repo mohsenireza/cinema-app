@@ -130,7 +130,7 @@ function SeatBooker() {
       <div className="seat-booker__seats">
         {[...Array(ROWS_NUMBER)].map((_, row) => (
           [...Array(COLUMNS_NUMBER)].map((_, column) => (
-            <div
+            <button
               key={`${row}_${column}`}
               data-testid="seat"
               className={`
