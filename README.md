@@ -5,10 +5,10 @@ This test app is a seat reservation system for cinemas and it is built with Reac
 You can visit the live website [here](https://cinema-web-app.netlify.app/).
 
 ### npm run dev
-Runs the project on your local machine in development mode
+Runs the project on your local machine in development mode.
 
 ### npm run test:unit
-Runs unit tests
+Runs unit tests.
 
 ### npm run test:e2e
-Runs end-to-end tests
+Runs end-to-end tests.
