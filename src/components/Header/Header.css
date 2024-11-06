@@ -23,11 +23,14 @@
   transition: 0.3s;
 }
 
-.header__back-button:hover {
-  transform: translateX(-10px);
-}
-
 .header__back-icon {
   height: 24px;
   width: 24px;
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .header__back-button:hover {
+    transform: translateX(-10px);
+  }
 }

@@ -5,6 +5,7 @@
   padding-bottom: 64px;
 }
 
+/* Mobile */
 @media only screen and (max-width: 768px) {
   .layout__container {
     padding-bottom: 32px;

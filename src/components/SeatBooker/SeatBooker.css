@@ -42,15 +42,19 @@
   cursor: pointer;
 }
 
-.seat-booker__submit-button:hover {
-  background-color: var(--blue-secondary);
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .seat-booker__submit-button:hover {
+    background-color: var(--blue-secondary);
+  }
+
+  .seat-booker__submit-button--disabled,
+  .seat-booker__submit-button--disabled:hover {
+    background-color: var(--grey);
+  }
 }
 
-.seat-booker__submit-button--disabled,
-.seat-booker__submit-button--disabled:hover {
-  background-color: var(--grey);
-}
-
+/* Mobile */
 @media only screen and (max-width: 768px) {
   .seat-booker__seats {
     gap: 4px;

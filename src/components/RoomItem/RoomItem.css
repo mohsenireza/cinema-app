@@ -6,11 +6,6 @@
   transition: 0.3s;
 }
 
-.room-item:hover {
-  background-color: var(--grey);
-  box-shadow: none;
-}
-
 .room-item__link {
   display: flex;
   justify-content: center;
@@ -21,4 +16,12 @@
   font-size: 32px;
   height: 100%;
   width: 100%;
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+  .room-item:hover {
+    background-color: var(--grey);
+    box-shadow: none;
+  }
 }
