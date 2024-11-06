@@ -1,6 +1,6 @@
 # Cinema app
 
-This test app is a seat reservation system for cinemas and it is built with React. unit tests are implemented using Jest and React Testing Library. also ent to end tests are implemented using Cypress.
+This test app is a seat reservation system for cinemas and it is built with React. unit tests are implemented using Jest and React Testing Library. and end to end tests are implemented using Cypress. also CircleCI is used to automate the process of running unit tests.
 
 You can visit the live website [here](https://cinema-web-app.netlify.app/).
 
